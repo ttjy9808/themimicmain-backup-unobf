@@ -109,17 +109,87 @@ end)
 local section2 = page:addSection("Map2")
 section2:addButton("Auto Win", function()
 	for i, v in pairs(Workspace:GetDescendants()) do
-    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Name == "Butterfly" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
         wait(0.5)
         fireproximityprompt(v)
     end
 end
 end)
+local section3 = page:addSection("Map3")
+section3:addButton("Auto Win", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(665.63,18.17,2108.62)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(620.22,17.87,2340.73)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(756.75,16.39,2538.24)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(860.18,24.85,2548.28)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(855.96,15.47,2388.36)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(836.29,19.01,2247.34)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(688.41,28.37,2251.57)
+task.wait(0.3)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+    end
+end
+end)
 
-
-
-
+local page = venyx:addPage("book2 chapter1", 5012544693)
+local section1 = page:addSection("Use KtollT until i update")
+section1:addButton("gay execute KtollT", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/KTollT/KTollT/main/README.md'))()
+end)	
+local page = venyx:addPage("book2 chapter2", 5012544693)
+local section1 = page:addSection("what?")
+section1:addButton("uh wait let me update u nig", function()
+	
+end)	
 
 
 
