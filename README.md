@@ -279,8 +279,8 @@ end
 end)
 
 local section7 = page:addSection("SKIP NUMBER PUZZLE")
-section7:addButton("COMMING SOON", function()
-
+section7:addButton("teleport", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2005.8,968.25,-4909.48)
 end)
 
 local section7point5 = page:addSection("AFTER COOK")
