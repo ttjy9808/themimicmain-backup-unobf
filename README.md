@@ -1,4 +1,4 @@
-**
+
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 local venyx = library.new("The mimic script by TTJY", 5013109572)
@@ -190,6 +190,8 @@ end)
 local page = venyx:addPage("book2 chapter2", 5012544693)
 local section1 = page:addSection("Start")
 section1:addButton("Auto win", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.78,23.1,-73.17)
+task.wait(2)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-550,30,-87.29)
 end)
 local section2 = page:addSection("someone eat meat")
@@ -197,12 +199,7 @@ section2:addButton("Auto win", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3953.17,594.22,317.07)
 		task.wait()
 		for i, v in pairs(Workspace:GetDescendants()) do
-    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
-        fireproximityprompt(v)
-        fireproximityprompt(v)
-        fireproximityprompt(v)
-        fireproximityprompt(v)
-        fireproximityprompt(v)
+    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "TeleportDoor" then
         fireproximityprompt(v)
     end
 end
@@ -212,29 +209,89 @@ section3:addButton("Talk", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4443.11,711.37,1163.78)
 for i, v in pairs(Workspace:GetDescendants()) do
     	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
-    	wait(0.3)
+    	wait(0.5)
         fireproximityprompt(v)
 		task.wait()
     	end
 		end
 end)
 
+local section4 = page:addSection("Auto Meat")
+section4:addButton("Auto win", function()
+local success = 0
+if game.Players.LocalPlayer.PlayerGui["00_Marker"].Markers:FindFirstChild("Frame") then
+venyx:Notify("WAIT", value)
+for i, v in ipairs(Workspace:GetDescendants()) do
+    if v.Parent:IsA("BasePart") and v:FindFirstChild("EndRoom") then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = EndRoom["Coral_3_G3"].CFrame
+    end
+end
+task.wait()
+for i, v in ipairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "DoorTele" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+    end
+end
+task.wait(20)
+venyx:Notify("NOW GO", value)
+else
+for i, v in ipairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and success < 6 and v.Parent.Parent.Parent.Name == "RestaurantRoom" and v.Parent.Transparency == 0 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        wait(0.3)
+        fireproximityprompt(v)
+        success = success + 1
+    end
+end
+venyx:Notify("DONT TALK,wait 10 second", value)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4443.11,711.37,1163.78)
+task.wait(10)
+venyx:Notify("NOW TALK", value)
+end
+end)
 
 
 
+local section5 = page:addSection("RUN")
+section5:addButton("ENTER ZONE", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4590,843.64,-35.54)
+end)
+section5:addButton("AUTO RUN", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5364,682.12,29.63)
+end)
 
+local section6 = page:addSection("LEVER")
+section6:addButton("ENTER ZONE", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11035,-81.4,-12.56)
+end)
 
+section6:addButton("AUTO LEVER", function()
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Name == "Lever" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        wait(0.3)
+        fireproximityprompt(v)
+    end
+end
 
+		task.wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10060,484.1,-9.52)
+end)
 
+local section7 = page:addSection("SKIP NUMBER PUZZLE")
+section7:addButton("COMMING SOON", function()
 
+end)
 
+local section7point5 = page:addSection("AFTER COOK")
+section7point5:addButton("COMMING SOON", function()
 
+end)
 
-
-
-
-
-
+local section8 = page:addSection("CURSED ZONE")
+section8:addButton("TELEPORT TO CURSED ZONE 2", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4079.71,613.7,-968.13)
+end)
 
 
 
@@ -249,4 +306,4 @@ for theme, color in pairs(themes) do -- all in one theme changer, i know, im coo
 end
 
 -- load
-venyx:SelectPage(venyx.pages[1], true)**
+venyx:SelectPage(venyx.pages[1], true)
