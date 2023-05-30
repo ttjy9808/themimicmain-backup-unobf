@@ -185,11 +185,40 @@ local section1 = page:addSection("Use KtollT until i update")
 section1:addButton("gay execute KtollT", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/KTollT/KTollT/main/README.md'))()
 end)	
+
+
 local page = venyx:addPage("book2 chapter2", 5012544693)
-local section1 = page:addSection("what?")
-section1:addButton("uh wait let me update u nig", function()
-	
-end)	
+local section1 = page:addSection("Start")
+section1:addButton("Auto win", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-550,30,-87.29)
+end)
+local section2 = page:addSection("someone eat meat")
+section2:addButton("Auto win", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3953.17,594.22,317.07)
+		task.wait()
+		for i, v in pairs(Workspace:GetDescendants()) do
+    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+        fireproximityprompt(v)
+    end
+end
+end)
+local section3 = page:addSection("Meat")
+section3:addButton("Talk", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4443.11,711.37,1163.78)
+for i, v in pairs(Workspace:GetDescendants()) do
+    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
+    	wait(0.3)
+        fireproximityprompt(v)
+		task.wait()
+    	end
+		end
+end)
+
 
 
 
