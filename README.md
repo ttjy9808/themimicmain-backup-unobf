@@ -257,6 +257,8 @@ section5:addButton("ENTER ZONE", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4590,843.64,-35.54)
 end)
 section5:addButton("AUTO RUN", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5364,900,29.63)
+task.wait(5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5364,682.12,29.63)
 end)
 
@@ -281,6 +283,64 @@ end)
 local section7 = page:addSection("SKIP NUMBER PUZZLE")
 section7:addButton("teleport", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2005.8,968.25,-4909.48)
+end)
+
+local section7point1 = page:addSection("COOK")
+section7point1:addButton("AUTO COOK EYEBALL", function()
+for _, v in pairs(Workspace:GetDescendants()) do -- eyeball
+    if v.Parent:IsA("BasePart") and v:IsA("ProximityPrompt") and v.Parent.Parent.Name == "Bowl" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        wait(0.3)
+        fireproximityprompt(v)
+    end
+end
+
+wait(0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2741.79, 968.25, -4906.07)
+
+for _, v in pairs(Workspace:GetDescendants()) do
+    if v.Parent:IsA("BasePart") and v:IsA("ProximityPrompt") and v.Parent.Parent.Name == "WoodenCounter" then
+        wait(2)
+        fireproximityprompt(v)
+        task.wait(1)
+
+        for _, e in pairs(Workspace:GetDescendants()) do
+            if e.Parent:IsA("BasePart") and e:IsA("ProximityPrompt") and e.Parent.Parent.Name == "Eyeball" and e.Parent.Parent:IsA("Model") then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = e.Parent.CFrame
+                wait(0.3)
+                fireproximityprompt(e)
+                task.wait(0.5)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2741.79, 968.25, -4906.07)
+
+                for _, j in pairs(Workspace:GetDescendants()) do
+                    if j.Parent:IsA("BasePart") and j:IsA("ProximityPrompt") and j.Parent.Parent.Name == "WoodenCounter" then
+                        wait(1)
+                        fireproximityprompt(j)
+                        task.wait(2)
+
+                        for _, q in pairs(Workspace:GetDescendants()) do
+                            if q.Parent:IsA("BasePart") and q:IsA("ProximityPrompt") and q.Parent.Parent.Name == "Spaghetti" and q.Parent.Parent:IsA("Model") then
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = q.Parent.CFrame
+                                wait(0.3)
+                                fireproximityprompt(q)
+                                task.wait(0.5)
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2741.79, 968.25, -4906.07)
+
+                                for _, l in pairs(Workspace:GetDescendants()) do
+                                    if l.Parent:IsA("BasePart") and l:IsA("ProximityPrompt") and l.Parent.Parent.Name == "WoodenCounter" then
+                                        wait(2)
+                                        fireproximityprompt(l)
+                                        task.wait(1)
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
 end)
 
 local section7point5 = page:addSection("AFTER COOK")
