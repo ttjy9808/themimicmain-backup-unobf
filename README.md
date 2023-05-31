@@ -276,7 +276,7 @@ for i, v in pairs(workspace:GetDescendants()) do
     end
 end
 
-		task.wait(3)
+		task.wait(6)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10060,484.1,-9.52)
 end)
 
@@ -333,12 +333,16 @@ for _, v in pairs(Workspace:GetDescendants()) do
                                         task.wait(1)
                                     end
                                 end
+                                break
                             end
                         end
+                        break
                     end
                 end
+                break
             end
         end
+        break
     end
 end
 end)
