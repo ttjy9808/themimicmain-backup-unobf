@@ -226,7 +226,6 @@ end)
 
 local section4 = page:addSection("Auto Meat")
 section4:addButton("Auto win", function()
-local success = 0
 if game.Players.LocalPlayer.PlayerGui["00_Marker"].Markers:FindFirstChild("Frame") then
 venyx:Notify("WAIT", value)
 for i, v in ipairs(Workspace:GetDescendants()) do
@@ -243,6 +242,19 @@ end
 task.wait(20)
 venyx:Notify("NOW GO", value)
 else
+local success = 0
+local successbowl = 0
+task.wait()
+for i, v in ipairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Parent.Name == "RestaurantRoom" and successbowl == 0 and v.Parent.Parent.Name == "BowlGiver" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        wait(0.3)
+        fireproximityprompt(v)
+        task.wait()
+        successbowl = successbowl + 1
+    end
+end
+task.wait()
 for i, v in ipairs(Workspace:GetDescendants()) do
     if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and success < 6 and v.Parent.Parent.Parent.Name == "RestaurantRoom" and v.Parent.Transparency == 0 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
