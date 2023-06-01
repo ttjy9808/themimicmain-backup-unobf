@@ -191,7 +191,14 @@ local page = venyx:addPage("book2 chapter2", 5012544693)
 local section1 = page:addSection("Start")
 section1:addButton("Auto win", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.78,23.1,-73.17)
-task.wait(2)
+local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+  for _, v in pairs(game.Workspace:GetDescendants()) do
+                   if v:IsA("TouchTransmitter") or v:IsA("TouchInterest") then
+                       firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart or game.Players.LocalPlayer.Character.Torso, v:FindFirstAncestorWhichIsA("Part"),0)
+                   end
+               end
+task.wait(10)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-550,30,-87.29)
 end)
 local section2 = page:addSection("someone eat meat")
@@ -203,6 +210,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3953.17
         fireproximityprompt(v)
     end
 end
+venyx:Notify("Click again", value)
 end)
 local section3 = page:addSection("Meat")
 section3:addButton("Talk", function()
@@ -348,15 +356,41 @@ end
 end)
 
 local section7point5 = page:addSection("AFTER COOK")
-section7point5:addButton("COMMING SOON", function()
-
+section7point5:addButton("Auto Run", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3347.32,1205,-6824)
+venyx:Notify("Wait For Time", value)
+wait(10)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3345.78,1205,-6794.84)
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3347.32,1205,-6824)
 end)
 
 local section8 = page:addSection("CURSED ZONE")
 section8:addButton("TELEPORT TO CURSED ZONE 2", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4079.71,613.7,-968.13)
 end)
-
+section8:addButton("Remove monster(singleplayer)", function()
+for i, v in pairs(workspace:GetDescendants()) do
+            if v.Parent:IsA("BasePart") and v.Parent.Name == "GAMESTART" then
+                v:Destroy()
+            end
+        end
+end)
+local section9 = page:addSection("KID")
+section9:addButton("Click this first", function()
+for i,v in pairs(workspace:GetDescendants()) do
+  		if v.Name == "SquidGames" then
+     	v:Destroy()
+     	end
+	end
+end)
+section9:addButton("Auto find kid", function()
+for i,v in pairs(workspace:GetDescendants()) do
+  if v:IsA("BasePart") and v.Name == "IndicatorPic" then
+     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+     end
+end
+end)
 
 
 -- second page
