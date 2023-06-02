@@ -1,4 +1,8 @@
-
+if game.CoreGui:FindFirstChild("The mimic script by TTJY") then
+local ddddddddestroy = game.CoreGui["The mimic script by TTJY"]
+ddddddddestroy:Destroy()
+end
+task.wait()
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
 local venyx = library.new("The mimic script by TTJY", 5013109572)
@@ -403,6 +407,83 @@ for i,v in pairs(workspace:GetDescendants()) do
      end
 end
 end)
+section9:addButton("Teleport to Gate", function()
+for i,v in pairs(workspace:GetDescendants()) do
+  if v:IsA("BasePart") and v.Name == "Formation" then
+     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+     end
+end
+end)
+section9:addButton("Auto Get Notes", function()
+for i, v in pairs(workspace:GetDescendants()) do
+            if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Name == "Note" then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+                wait(0.3)
+                fireproximityprompt(v)
+            end
+        end
+end)
+
+local section10 = page:addSection("Nagisa")
+section10:addButton("Anti Nagisa laser", function()
+while true do
+		for i, v in pairs(workspace:GetDescendants()) do
+            if v.Name == "POISON" then
+local distance = 100
+
+while true do
+	localplayer = game.Players.LocalPlayer 
+ 	Char = localplayer.Character or workspace:FindFirstChild(localplayer.Name)
+         HRP = Char and Char:FindFirstChild("HumanoidRootPart")
+        if not Char or not HRP then
+           
+        end
+         p = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+         hrd = game.Players.LocalPlayer.Character.HumanoidRootPart
+         py = game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y
+         
+    local character = game.Players.LocalPlayer.Character
+    local position = v and v.Position or nil
+    currentPos = Vector3.new(p.x, 100, p.z)
+    if position and (position - character.HumanoidRootPart.Position).Magnitude <= distance then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1982.58,100,-4780.12)
+    end
+    
+    wait(0.1)
+end
+end
+	end
+	end
+end)
+
+section10:addButton("Auto Get cannon ball", function()
+while task.wait() do
+		for i, v in pairs(workspace:GetDescendants()) do
+            if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "BallGiver" and game.Players.LocalPlayer.PlayerGui.BossFight.Ammo.Text == "0" then
+                game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+                wait(0.3)
+                fireproximityprompt(v)
+                fireproximityprompt(v)
+                fireproximityprompt(v)
+                fireproximityprompt(v)
+                fireproximityprompt(v)
+                task.wait()
+            end
+end
+	end
+end)
+
+local section11 = page:addSection("Nagisa Serpent")
+section11:addButton("COMMING SOON", function()
+
+end)
+
+
+
+
+
+
+
 
 
 -- second page
