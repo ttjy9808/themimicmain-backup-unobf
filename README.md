@@ -323,6 +323,7 @@ local tweenService = game:GetService("TweenService")
 local tweenInfo = TweenInfo.new(5, Enum.EasingStyle.Linear)
 
 local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-5364,682.12,29.63)})
+tween:Play()
 end)
 
 local section6 = page:addSection("LEVER")
@@ -331,6 +332,21 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11035,-
 end)
 
 section6:addButton("AUTO LEVER", function()
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Name == "Lever" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        wait(0.3)
+        fireproximityprompt(v)
+    end
+end
+
+		task.wait(6)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10060,484.1,-9.52)
+end)
+
+section6:addButton("FULL AUTO WIN", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11035,-81.4,-12.56)
+task.wait(5)
 for i, v in pairs(workspace:GetDescendants()) do
     if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Name == "Lever" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
@@ -412,15 +428,20 @@ end)
 
 local section7point5 = page:addSection("AFTER COOK")
 section7point5:addButton("Auto Run", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3347.32,1205,-6824)
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Linear)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3345.78,1205,-6794.84)})
+tween:Play()
 venyx:Notify("Wait For Time", value)
-wait(10)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3345.78,1205,-6794.84)
-task.wait(3)
+task.wait(4)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3347.32,1205,-6824)
 end)
 
 local section8 = page:addSection("CURSED ZONE")
+section8:addButton("Auto win cursed zone1", function()
+venyx:Notify("Error 08", "report this to ttjy")
+end)
 section8:addButton("TELEPORT TO CURSED ZONE 2", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4079.71,613.7,-968.13)
 end)
