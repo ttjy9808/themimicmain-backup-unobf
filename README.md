@@ -213,8 +213,12 @@ tween:Play()
 end)
 local section2 = page:addSection("someone eat meat")
 section2:addButton("Auto win", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3953.17,594.22,317.07)
-		task.wait(1)
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(40, Enum.EasingStyle.Linear)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3953.17,594.22,317.07)})
+tween:Play()
+task.wait(41)
 		for i, v in pairs(Workspace:GetDescendants()) do
     	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "TeleportDoor" then
     	wait(0.3)
@@ -559,6 +563,42 @@ end)
 
 
 
+
+
+
+
+
+
+
+local page = venyx:addPage("The Witch Trial", 5012544693)
+local section1 = page:addSection("All IN ONE")
+section1:addButton("Auto win", function()
+if game.PlaceId == 7068738088 or game.PlaceId == 7068951438 then
+	for i, v in pairs(Workspace:GetDescendants()) do
+    	if v.Parent:IsA("BasePart") and v.Parent.Name == "Game Teleporter" then
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        	wait(0.3)
+        	fireproximityprompt(v)
+    	end
+	end
+elseif game.PlaceId == 7068739000 or game.PlaceId == 7068951914 then
+	for i, v in pairs(Workspace:GetDescendants()) do
+    	if v.Parent:IsA("BasePart") and v.Parent.Name == "Game Teleporter" then
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+       	 	wait(0.3)
+        	fireproximityprompt(v)
+    	end
+	end
+elseif game.PlaceId == 7068740106 or game.PlaceId == 7068952294 then
+	for i, v in pairs(Workspace:GetDescendants()) do
+    	if v.Parent:IsA("BasePart") and v.Parent.Name == "Game Teleporter" then
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        	wait(0.3)
+        	fireproximityprompt(v)
+    	end
+	end
+end
+end)
 
 
 
