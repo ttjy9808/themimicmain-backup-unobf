@@ -1,11 +1,11 @@
-if game.CoreGui:FindFirstChild("The mimic script by TTJY BETA") then
-local ddddddddestroy = game.CoreGui["The mimic script by TTJY BETA"]
+if game.CoreGui:FindFirstChild("TTJY X POOM HUB X CAT SUS X KTOLLT BETA") then
+local ddddddddestroy = game.CoreGui["TTJY X POOM HUB X CAT SUS X KTOLLT BETA"]
 ddddddddestroy:Destroy()
 end
 task.wait()
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
-local venyx = library.new("The mimic script by TTJY BETA", 5013109572)
+local venyx = library.new("TTJY X POOM HUB X CAT SUS X KTOLLT BETA", 5013109572)
 
 -- themes
 local themes = {
@@ -258,20 +258,19 @@ end)
 local section4 = page:addSection("Auto Meat")
 section4:addButton("Auto win", function()
 if game.Players.LocalPlayer.PlayerGui["00_Marker"].Markers:FindFirstChild("Frame") then
-venyx:Notify("WAIT", value)
-for i, v in ipairs(Workspace:GetDescendants()) do
-    if v.Parent:IsA("BasePart") and v:FindFirstChild("EndRoom") then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = EndRoom["Coral_3_G3"].CFrame
+for Index, v in ipairs(game:GetService('Workspace'):GetDescendants()) do 
+    if v.Name == "DoorTele" then
+        local Pivot = v.WorldPivot 
+        game:GetService('Players').LocalPlayer.Character:FindFirstChild('HumanoidRootPart').CFrame = Pivot
     end
 end
 task.wait()
-for i, v in ipairs(Workspace:GetDescendants()) do
-    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "DoorTele" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+for i, v in pairs(Workspace:GetDescendants()) do
+    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "DoorTele" then
+    	wait(0.3)
+        fireproximityprompt(v)
     end
 end
-task.wait(20)
-venyx:Notify("NOW GO", value)
 else
 local success = 0
 local successbowl = 0
@@ -440,7 +439,11 @@ end)
 
 local section8 = page:addSection("CURSED ZONE")
 section8:addButton("Auto win cursed zone1", function()
-venyx:Notify("Error 08", "report this to ttjy")
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(3, Enum.EasingStyle.Linear)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-4250.71,613.7,-968.13)})
+tween:Play()
 end)
 section8:addButton("TELEPORT TO CURSED ZONE 2", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4079.71,613.7,-968.13)
