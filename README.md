@@ -194,7 +194,7 @@ end)
 local page = venyx:addPage("book2 chapter2", 5012544693)
 local section1 = page:addSection("Start")
 section1:addButton("Auto win", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.78,23.1,-73.17)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.78,1000,-73.17)
 local player = game.Players.LocalPlayer.Character.HumanoidRootPart
 
   for _, v in pairs(game.Workspace:GetDescendants()) do
@@ -202,31 +202,58 @@ local player = game.Players.LocalPlayer.Character.HumanoidRootPart
                        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart or game.Players.LocalPlayer.Character.Torso, v:FindFirstAncestorWhichIsA("Part"),0)
                    end
                end
-task.wait(10)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-550,30,-87.29)
+task.wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(252.78,1000,-73.17)
+task.wait()
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(30, Enum.EasingStyle.Linear)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-550, 30, -87.29)})
+tween:Play()
 end)
 local section2 = page:addSection("someone eat meat")
 section2:addButton("Auto win", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3953.17,594.22,317.07)
-		task.wait()
+		task.wait(1)
 		for i, v in pairs(Workspace:GetDescendants()) do
     	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "TeleportDoor" then
+    	wait(0.3)
         fireproximityprompt(v)
     end
 end
-venyx:Notify("Click again", value)
+venyx:Notify("error02", "report this to ttjy")
 end)
 local section3 = page:addSection("Meat")
 section3:addButton("Talk", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4443.11,711.37,1163.78)
-for i, v in pairs(Workspace:GetDescendants()) do
-    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart")  then
-    	wait(0.5)
-        fireproximityprompt(v)
-		task.wait()
-    	end
-		end
+venyx:Notify("error03", "report this to ttjy")
+local TalkDebounce = false
+local Client = game.Players.LocalPlayer
+local VirtualUser = game:GetService("VirtualUser")
+if not TalkDebounce then 
+        if Client.Character then 
+            if Client.Character:FindFirstChild('HumanoidRootPart') then 
+                TalkDebounce = true
+                Client.Character:FindFirstChild('HumanoidRootPart').CFrame = CFrame.new(-4443, 711, 1164)
+                task.wait(0.28)
+                for Index, v in ipairs(game:GetService("Workspace"):GetDescendants()) do 
+                    if v.Name == "NoppeNPC" then 
+                        local Prompt = v.RootPart:FindFirstChildOfClass('ProximityPrompt')
+                        fireproximityprompt(Prompt, 1)
+                    end 
+                end 
+                for i = 1,100 do 
+                    VirtualUser:ClickButton1(Vector2.new(500,0))
+                    task.wait(0.001)
+                end 
+                TalkDebounce = false
+            end 
+        end 
+    end
 end)
+
+
+
+
 
 local section4 = page:addSection("Auto Meat")
 section4:addButton("Auto win", function()
@@ -273,6 +300,10 @@ task.wait(10)
 venyx:Notify("NOW TALK", value)
 end
 end)
+
+
+
+
 
 
 
@@ -377,7 +408,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3347.32
 venyx:Notify("Wait For Time", value)
 wait(10)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3345.78,1205,-6794.84)
-task.wait()
+task.wait(3)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3347.32,1205,-6824)
 end)
 
@@ -392,6 +423,22 @@ for i, v in pairs(workspace:GetDescendants()) do
             end
         end
 end)
+
+section8:addDropdown("Select hide spot", {"Hide Spot1", "Hide Spot2", "Hide Spot3"}, function(hide)
+	gaysexhod = hide
+end)
+section8:addButton("Hide", function(hide)
+	if gaysexhod == "Hide Spot1" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4066.81,630.67,-985.54)
+		elseif gaysexhod == "Hide Spot2" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4053.62,666.31,-951.76)
+		elseif gaysexhod == "Hide Spot3" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4088.17,743.82,-959.96)
+		else
+		venyx:Notify("", "Select one")
+	end
+end)
+
 local section9 = page:addSection("KID")
 section9:addButton("Click this first", function()
 for i,v in pairs(workspace:GetDescendants()) do
