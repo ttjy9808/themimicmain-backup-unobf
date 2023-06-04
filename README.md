@@ -316,6 +316,14 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5364,90
 task.wait(5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5364,682.12,29.63)
 end)
+section5:addButton("FULL AUTO WIN", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4590,843.64,-35.54)
+task.wait(10)
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(5, Enum.EasingStyle.Linear)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-5364,682.12,29.63)})
+end)
 
 local section6 = page:addSection("LEVER")
 section6:addButton("ENTER ZONE", function()
