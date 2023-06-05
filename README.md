@@ -214,18 +214,94 @@ end)
 local section2 = page:addSection("someone eat meat")
 section2:addButton("Auto win", function()
 local tweenService = game:GetService("TweenService")
-local tweenInfo = TweenInfo.new(40, Enum.EasingStyle.Linear)
+local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
 
-local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3953.17,594.22,317.07)})
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3393.17,575.8,882.26)})
 tween:Play()
-task.wait(41)
-		for i, v in pairs(Workspace:GetDescendants()) do
-    	if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "TeleportDoor" then
-    	wait(0.3)
+task.wait(2)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3480.65,602.74,883.71)})
+tween:Play()
+
+task.wait(2)
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3576.7,602.74,886.94)})
+tween:Play()
+task.wait(2)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "ProxDoorA" then
+        wait(0.3)
         fireproximityprompt(v)
     end
 end
-venyx:Notify("error02", "report this to ttjy")
+task.wait()
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3611,602.75,888.68)})
+tween:Play()
+task.wait(2)
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3615.55,609,849.24)})
+tween:Play()
+task.wait(2)
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v.Name == "1" and v.Parent.Name == "Regions" then
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3)
+    end
+end
+task.wait()
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "ProxDoorB" then
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+        wait(0.3)
+        fireproximityprompt(v)
+    end
+end
+task.wait()
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v.Name == "2" and v.Parent.Name == "Regions" then
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3)
+    end
+end
+task.wait()
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v.Name == "3" and v.Parent.Name == "Regions" then
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3)
+    end
+end
+task.wait()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3668.39,602,561.68)
+task.wait()
+for i, v in pairs(Workspace:GetDescendants()) do
+    if v.Name == "5" and v.Parent.Name == "Regions" then
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+        wait(0.3)
+    end
+end
+task.wait()
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3606.38,602.74,499.38)
+task.wait()
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3607.62,602.74,348.75)})
+tween:Play()
+task.wait(2)
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3636.15356, 616.979187, 335.414795, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+task.wait(2)
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3797.9436, 605.098328, 336.270203, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+task.wait(2)
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3858.4939, 594.407532, 333.196594, 0, 0, -1, 1, 0, 0, 0, -1, 0)})
+tween:Play()
+task.wait(2)
+tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3952.85,594.22,317.7)})
+tween:Play()
+task.wait(100)
+for i, v in pairs(Workspace:GetDescendants()) do
+        if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "TeleportDoor" then
+        wait(0.3)
+        fireproximityprompt(v)
+    end
+end
+
 end)
 local section3 = page:addSection("Meat")
 section3:addButton("Talk", function()
@@ -450,7 +526,11 @@ local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Charact
 tween:Play()
 end)
 section8:addButton("TELEPORT TO CURSED ZONE 2", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4079.71,613.7,-968.13)
+local tweenService = game:GetService("TweenService")
+local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
+
+local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-4079.71,613.7,-968.13)})
+tween:Play()
 end)
 section8:addButton("Remove monster(singleplayer)", function()
 for i, v in pairs(workspace:GetDescendants()) do
@@ -601,9 +681,20 @@ end
 end)
 
 
-
-
-
+local page = venyx:addPage("KeyBind", 5012544693)
+local section1 = page:addSection("Open/Close Keybind")
+section1:addKeybind("Open/Close", Enum.KeyCode.P, function()
+local ddddddddestroy2 = game.CoreGui["TTJY X POOM HUB X CAT SUS X KTOLLT BETA"]
+if ddddddddestroy2.Enabled == true then
+ddddddddestroy2.Enabled = false
+elseif ddddddddestroy2.Enabled == false then
+ddddddddestroy2.Enabled = true
+else
+venyx:Notify("Error 05", "report this to ttjy")
+end
+end, function()
+venyx:Notify("KeyBind has change", "")
+end)
 
 -- second page
 local theme = venyx:addPage("Theme", 5012544693)
