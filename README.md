@@ -1,11 +1,11 @@
-if game.CoreGui:FindFirstChild("TTJY X POOM HUB X CAT SUS X KTOLLT BETA") then
-local ddddddddestroy = game.CoreGui["TTJY X POOM HUB X CAT SUS X KTOLLT BETA"]
+if game.CoreGui:FindFirstChild("TTJY X POOM HUB X CAT SUS X KTOLLT X XVAS BETA") then
+local ddddddddestroy = game.CoreGui["TTJY X POOM HUB X CAT SUS X KTOLLT X XVAS BETA"]
 ddddddddestroy:Destroy()
 end
 task.wait()
 -- init
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
-local venyx = library.new("TTJY X POOM HUB X CAT SUS X KTOLLT BETA", 5013109572)
+local venyx = library.new("TTJY X POOM HUB X CAT SUS X KTOLLT X XVAS BETA", 5013109572)
 
 -- themes
 local themes = {
@@ -213,6 +213,28 @@ tween:Play()
 end)
 local section2 = page:addSection("someone eat meat")
 section2:addButton("Auto win", function()
+local function findObjectInRegions()
+    local descendants = workspace:GetDescendants()
+    for i, v in ipairs(descendants) do
+        if v.Name == "Regions" then
+            local child = v:FindFirstChild("5")
+            if child then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+repeat
+    venyx:Notify("Error01", "Where is 5?")
+    task.wait()
+    venyx:Notify("Error01", "Found")
+until findObjectInRegions()
+
+
+
+task.wait()
 local tweenService = game:GetService("TweenService")
 local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
 
@@ -243,7 +265,6 @@ task.wait(2)
 for i, v in pairs(Workspace:GetDescendants()) do
     if v.Name == "1" and v.Parent.Name == "Regions" then
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-        wait(0.3)
     end
 end
 task.wait()
@@ -258,23 +279,18 @@ task.wait()
 for i, v in pairs(Workspace:GetDescendants()) do
     if v.Name == "2" and v.Parent.Name == "Regions" then
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-        wait(0.3)
     end
 end
 task.wait()
 for i, v in pairs(Workspace:GetDescendants()) do
     if v.Name == "3" and v.Parent.Name == "Regions" then
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-        wait(0.3)
     end
 end
-task.wait()
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3668.39,602,561.68)
 task.wait()
 for i, v in pairs(Workspace:GetDescendants()) do
     if v.Name == "5" and v.Parent.Name == "Regions" then
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-        wait(0.3)
     end
 end
 task.wait()
@@ -294,7 +310,36 @@ tween:Play()
 task.wait(2)
 tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3952.85,594.22,317.7)})
 tween:Play()
-task.wait(100)
+coroutine.wrap(function()
+	local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- Create a Frame
+local frame = Instance.new("Frame")
+frame.BackgroundTransparency = 1 -- Set background transparency to 1 (fully transparent)
+frame.Size = UDim2.new(0, 70, 0, 70)
+frame.Position = UDim2.new(0.5, -35, 0.5, -35) -- Position at the center of the screen
+frame.Parent = screenGui
+
+-- Create a TextLabel
+local textLabel = Instance.new("TextLabel")
+textLabel.BackgroundTransparency = 1 -- Set background transparency to 1 (fully transparent)
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.TextColor3 = Color3.fromRGB(0, 255, 0) -- Green text color
+textLabel.TextSize = 70
+textLabel.Parent = frame
+
+-- Count down from 100 to 0
+for i = 50, 0, -1 do
+    textLabel.Text = "Waiting For Bypass Anti-Cheat : " .. tostring(i) 
+    wait(1) -- Wait for 1 second
+end
+
+-- Destroy the ScreenGui
+screenGui:Destroy()
+end)()
+
+wait(50)
 for i, v in pairs(Workspace:GetDescendants()) do
         if v:IsA("ProximityPrompt") and v.Parent:IsA("BasePart") and v.Parent.Parent.Name == "TeleportDoor" then
         wait(0.3)
@@ -532,6 +577,9 @@ local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Linear)
 local tween = tweenService:Create(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-4079.71,613.7,-968.13)})
 tween:Play()
 end)
+section8:addButton("Error ??", function()
+
+end)
 section8:addButton("Remove monster(singleplayer)", function()
 for i, v in pairs(workspace:GetDescendants()) do
             if v.Parent:IsA("BasePart") and v.Parent.Name == "GAMESTART" then
@@ -637,7 +685,7 @@ end
 end)
 
 local section11 = page:addSection("Nagisa Serpent")
-section11:addButton("COMMING SOON", function()
+section11:addButton("Error ??", function()
 
 end)
 
@@ -684,7 +732,7 @@ end)
 local page = venyx:addPage("KeyBind", 5012544693)
 local section1 = page:addSection("Open/Close Keybind")
 section1:addKeybind("Open/Close", Enum.KeyCode.P, function()
-local ddddddddestroy2 = game.CoreGui["TTJY X POOM HUB X CAT SUS X KTOLLT BETA"]
+local ddddddddestroy2 = game.CoreGui["TTJY X POOM HUB X CAT SUS X KTOLLT X XVAS BETA"]
 if ddddddddestroy2.Enabled == true then
 ddddddddestroy2.Enabled = false
 elseif ddddddddestroy2.Enabled == false then
